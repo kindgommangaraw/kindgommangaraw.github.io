@@ -1,1 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://kindgommangaraw.github.io/</loc></url><url><loc>https://kindgommangaraw.github.io/manga.html</loc></url><url><loc>https://kindgommangaraw.github.io/country.html?country=JP</loc></url><url><loc>https://kindgommangaraw.github.io/country.html?country=FR</loc></url><url><loc>https://kindgommangaraw.github.io/blog.html</loc></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://kindgommangaraw.github.io/</loc></url>
+  <url><loc>https://kindgommangaraw.github.io/manga.html</loc></url>
+  <url><loc>https://kindgommangaraw.github.io/country.html?country=JP</loc></url>
+  <url><loc>https://kindgommangaraw.github.io/country.html?country=FR</loc></url>
+  <url><loc>https://kindgommangaraw.github.io/blog.html</loc></url>
+  <url><loc>https://kindgommangaraw.github.io/chapter.html?slug=kingdom-raw-887</loc></url>
+</urlset>
