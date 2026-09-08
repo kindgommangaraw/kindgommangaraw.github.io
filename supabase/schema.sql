@@ -1,0 +1,1 @@
+-- Deprecated: MangaReader now uses GitHub repository JSON data only.
