@@ -1,1 +1,12 @@
-{"manga":[]}
+{
+  "manga": [
+    {
+      "slug": "kingdom-raw",
+      "title": "キングダム raw ( Kingdom Raw )",
+      "country": "JP",
+      "author": "Yasuhisa Hara",
+      "cover": "",
+      "description": "キングダム raw ( Kingdom Raw ) chapters."
+    }
+  ]
+}
