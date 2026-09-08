@@ -23,7 +23,7 @@
 <div id="status" class="status">Enter your GitHub token and press Connect GitHub.</div>
 </div>
 
-<section id="panel" class="locked">
+<section id="panel">
 <div class="panel"><h2>📚 Manga</h2>
 <div class="grid"><div><label>Slug</label><input id="slug" placeholder="manga-slug"></div><div><label>Title</label><input id="title" placeholder="Manga title"></div></div>
 <div class="grid"><div><label>Country</label><input id="country" placeholder="JP / FR / US"></div><div><label>Author</label><input id="author" placeholder="Author"></div></div>
@@ -49,15 +49,14 @@
 const KEY="mr_admin_token";
 const token=document.getElementById("token"),connect=document.getElementById("connect"),status=document.getElementById("status"),loginStatus=document.getElementById("loginStatus"),panel=document.getElementById("panel");
 let adminLoaded=false;let inlineChapters=[];
-function setState(ok,text){panel.classList.toggle("locked",!ok);loginStatus.className="state "+(ok?"good":"bad");loginStatus.textContent="● "+text}
+function setState(ok,text){loginStatus.className="state "+(ok?"good":"bad");loginStatus.textContent="● "+text}
 async function primeChapterList(){try{const r=await fetch("../data/chapters.json?admin_ts="+Date.now(),{cache:"no-store"});if(!r.ok)throw Error("HTTP "+r.status);const data=await r.json();const s=document.getElementById("chapterSelect");s.innerHTML='<option value="">Select chapter to edit</option>';const chapters=data.chapters||[];inlineChapters=chapters;chapters.forEach(c=>{const o=document.createElement("option");o.value=c.slug;o.textContent=(c.manga_title||c.manga_slug||"Manga")+" — "+(c.title||"Chapter "+c.number);s.appendChild(o)});if(chapters.length){s.value=chapters[0].slug;inlineFillChapter(chapters[0]);status.textContent="✓ "+chapters.length+" chapter(s) loaded — "+(chapters[0].title||"Chapter "+chapters[0].number)+" ready to edit."}else status.textContent="No chapters found in data/chapters.json."}}catch(e){status.textContent="❌ Chapter list error: "+(e.message||e)}}
 function inlineFillChapter(c){if(!c)return;document.getElementById("cslug").value=c.slug||"";document.getElementById("mangaSlug").value=c.manga_slug||"";document.getElementById("number").value=c.number||"";document.getElementById("chapterTitle").value=c.title||"";document.getElementById("pages").value=JSON.stringify(c.pages||[],null,2)}
 document.getElementById("chapterSelect").addEventListener("change",e=>{const c=inlineChapters.find(x=>x.slug===e.target.value);if(c){inlineFillChapter(c);status.textContent="✓ "+(c.title||"Chapter "+c.number)+" loaded for editing."}});
-function loadAdmin(){if(adminLoaded)return;adminLoaded=true;const s=document.createElement("script");s.src="admin.js?v=20260908-9";s.onload=()=>{status.textContent="✓ GitHub connected. Admin tools are unlocked.";primeChapterList()};s.onerror=()=>{adminLoaded=false;status.textContent="❌ Could not load admin.js."};document.body.appendChild(s)}
+function loadAdmin(){if(adminLoaded)return;adminLoaded=true;panel.classList.remove("locked");const s=document.createElement("script");s.src="admin.js?v=20260908-10";s.onload=()=>{status.textContent="✓ GitHub connected. Admin tools are unlocked.";primeChapterList()};s.onerror=()=>{adminLoaded=false;status.textContent="❌ Could not load admin.js."};document.body.appendChild(s)}
 async function verifyToken(t,manual=false){t=(t||"").trim();if(!t){status.textContent="Enter a GitHub token first.";setState(false,"Not connected");return}connect.disabled=true;connect.textContent="⏳ Connecting...";status.textContent="Verifying GitHub token and repository access...";try{const r=await fetch("https://api.github.com/repos/kindgommangaraw/kindgommangaraw.github.io",{headers:{Authorization:"Bearer "+t,Accept:"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"},cache:"no-store"});let d={};try{d=await r.json()}catch{}if(!r.ok)throw Error(d.message||("GitHub returned HTTP "+r.status));if(!d.full_name)throw Error("GitHub repository could not be verified.");localStorage.setItem(KEY,t);token.value="";setState(true,"Connected to "+d.full_name);status.textContent="✓ GitHub token verified. Admin tools are unlocked.";loadAdmin()}catch(e){if(manual)localStorage.removeItem(KEY);setState(false,"Not connected");status.textContent="❌ Connection failed: "+(e.message||"Check token permissions and try again.")}finally{connect.disabled=false;connect.textContent="🔗 Connect GitHub"}}
 connect.addEventListener("click",()=>verifyToken(token.value,true));
 window.addEventListener("error",e=>{status.textContent="❌ Admin error: "+(e.message||"JavaScript error")});
-document.getElementById("save").onclick=()=>{const t=token.value.trim();if(!t){status.textContent="Enter a token first.";return}localStorage.setItem(KEY,t);status.textContent="Token saved locally. Press Connect GitHub to verify it."};
 document.getElementById("clear").onclick=()=>{localStorage.removeItem(KEY);token.value="";setState(false,"Not connected");status.textContent="Token cleared."};
 const stored=localStorage.getItem(KEY);if(stored){setState(true,"Checking saved connection...");verifyToken(stored,false)}
 </script>
