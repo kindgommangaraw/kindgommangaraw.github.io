@@ -1,1 +1,61 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MangaReader Admin</title><link rel="stylesheet" href="admin.css"></head><body><main><h1>MangaReader Admin</h1><p>GitHub-only control panel. Token stays in this browser.</p><label>GitHub token<input id="token" type="password" autocomplete="off"></label><button id="save">Save locally</button><button id="clear">Clear</button><div id="loginGate"><h2>Admin Login</h2><p>Connect a GitHub token to unlock management tools.</p><button id="connect">Connect GitHub</button><span id="loginStatus"></span></div><section id="panel" hidden><hr><h2>Manga</h2><input id="slug" placeholder="slug"><input id="title" placeholder="title"><input id="country" placeholder="country (JP/FR/US...)"><input id="author" placeholder="author"><input id="cover" placeholder="cover path"><textarea id="description" placeholder="description"></textarea><button id="manga">Save manga</button><hr><h2>Chapter Manager</h2><select id="chapterSelect"><option value="">Select chapter to edit</option></select><button id="refreshChapters">Refresh chapters</button><input id="cslug" placeholder="chapter slug"><input id="mangaSlug" placeholder="manga slug"><input id="number" placeholder="chapter number"><input id="chapterTitle" placeholder="chapter title"><label>Chapter images<input id="imageFiles" type="file" accept="image/*" multiple></label><button id="uploadImages">Upload selected images to GitHub</button><textarea id="pages" placeholder="Uploaded page paths will appear here"></textarea><button id="chapter">Save / Update chapter</button><button id="deleteChapter">Delete chapter</button></section><pre id="status"></pre></main><script src="admin.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MangaReader Admin</title>
+<link rel="stylesheet" href="admin.css">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#08090d;color:#f4f5f7;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1050px;margin:auto;padding:24px 16px 50px}h1,h2{margin-top:0}.panel{background:#101118;border:1px solid #272b36;border-radius:14px;padding:20px;margin:14px 0;box-shadow:0 8px 28px rgba(0,0,0,.16)}.hero{border-color:#334d77}.muted{color:#9299a8;font-size:13px;line-height:1.6}label{display:block;font-size:13px;color:#aeb3c0;margin:12px 0 6px}input,textarea,select{width:100%;background:#090b10;color:#fff;border:1px solid #303542;border-radius:8px;padding:10px;font:inherit;outline:none;margin-bottom:8px}textarea{min-height:110px;resize:vertical}input:focus,textarea:focus,select:focus{border-color:#3f73c9;box-shadow:0 0 0 2px rgba(63,115,201,.12)}button{border:0;border-radius:8px;padding:10px 14px;background:#3f73c9;color:#fff;font-weight:700;cursor:pointer;margin:4px 4px 4px 0}button:hover{filter:brightness(1.08)}button:disabled{opacity:.5;cursor:not-allowed}.token-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end}.token-row button{height:42px;min-width:130px}.state{font-size:13px;font-weight:700}.bad{color:#f0aeb8}.good{color:#8ee6ad}.status{padding:10px;border-radius:8px;background:#171b23;margin-top:10px;white-space:pre-wrap;color:#b9c0cf}.locked{display:none}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.actions{margin-top:12px}.danger{background:#8f3f4d}@media(max-width:700px){.token-row,.grid{grid-template-columns:1fr}.token-row button{width:100%}}
+</style>
+</head>
+<body>
+<main>
+<div class="panel hero">
+<h1>⚙️ MangaReader Admin</h1>
+<p class="muted">GitHub-powered control panel. Connect your GitHub token first; management tools stay locked until the token is verified.</p>
+<div class="token-row">
+<div><label for="token">GitHub Token</label><input id="token" type="password" autocomplete="off" placeholder="Paste GitHub token here"></div>
+<button id="connect" type="button">🔗 Connect GitHub</button>
+</div>
+<div id="loginStatus" class="state bad">● Not connected</div>
+<div class="actions"><button id="save" type="button">Save locally</button><button id="clear" type="button">Clear token</button></div>
+<div id="status" class="status">Enter your GitHub token and press Connect GitHub.</div>
+</div>
+
+<section id="panel" class="locked">
+<div class="panel"><h2>📚 Manga</h2>
+<div class="grid"><div><label>Slug</label><input id="slug" placeholder="manga-slug"></div><div><label>Title</label><input id="title" placeholder="Manga title"></div></div>
+<div class="grid"><div><label>Country</label><input id="country" placeholder="JP / FR / US"></div><div><label>Author</label><input id="author" placeholder="Author"></div></div>
+<label>Cover path</label><input id="cover" placeholder="/images/cover.jpg">
+<label>Description</label><textarea id="description" placeholder="Description"></textarea>
+<button id="manga" type="button">💾 Save manga</button>
+</div>
+
+<div class="panel"><h2>📖 Chapter Manager</h2>
+<label>Existing chapter</label><select id="chapterSelect"><option value="">Select chapter to edit</option></select>
+<button id="refreshChapters" type="button">Refresh chapters</button>
+<div class="grid"><div><label>Chapter slug</label><input id="cslug" placeholder="chapter-slug"></div><div><label>Manga slug</label><input id="mangaSlug" placeholder="manga-slug"></div></div>
+<div class="grid"><div><label>Chapter number</label><input id="number" placeholder="1"></div><div><label>Chapter title</label><input id="chapterTitle" placeholder="Chapter 1"></div></div>
+<label>Chapter images</label><input id="imageFiles" type="file" accept="image/*" multiple>
+<button id="uploadImages" type="button">⬆️ Upload selected images</button>
+<label>Uploaded page paths</label><textarea id="pages" placeholder='["/chapter-images/chapter-slug/001.jpg"]'></textarea>
+<div class="actions"><button id="chapter" type="button">💾 Save / Update chapter</button><button id="deleteChapter" class="danger" type="button">🗑 Delete chapter</button></div>
+<p class="muted">Image ALT text is automatically set to the chapter name when the chapter is saved.</p>
+</div>
+</section>
+</main>
+<script>
+const KEY="mr_admin_token";
+const token=document.getElementById("token"),connect=document.getElementById("connect"),status=document.getElementById("status"),loginStatus=document.getElementById("loginStatus"),panel=document.getElementById("panel");
+let adminLoaded=false;
+function setState(ok,text){panel.classList.toggle("locked",!ok);loginStatus.className="state "+(ok?"good":"bad");loginStatus.textContent=ok?"● "+text:"● "+text}
+function loadAdmin(){if(adminLoaded)return;adminLoaded=true;const s=document.createElement("script");s.src="admin.js?v=20260908-2";s.onload=()=>{status.textContent="✓ GitHub connected. Admin tools are unlocked."};s.onerror=()=>{adminLoaded=false;status.textContent="❌ Could not load admin.js."};document.body.appendChild(s)}
+async function verify(){const t=token.value.trim();if(!t){status.textContent="Enter a GitHub token first.";setState(false,"Not connected");return}connect.disabled=true;connect.textContent="⏳ Connecting...";status.textContent="Verifying GitHub token...";try{const r=await fetch("https://api.github.com/user",{headers:{Authorization:"Bearer "+t,Accept:"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"},cache:"no-store"});if(!r.ok){let d={};try{d=await r.json()}catch{}throw Error(d.message||("GitHub returned HTTP "+r.status))}const u=await r.json();if(!u.login)throw Error("GitHub account could not be verified.");localStorage.setItem(KEY,t);token.value="";setState(true,"Connected as @"+u.login);status.textContent="✓ GitHub token verified. Admin tools are unlocked.";loadAdmin()}catch(e){localStorage.removeItem(KEY);setState(false,"Not connected");status.textContent="❌ Connection failed: "+(e.message||"Invalid token")}finally{connect.disabled=false;connect.textContent="🔗 Connect GitHub"}}
+connect.addEventListener("click",verify);
+document.getElementById("save").onclick=()=>{const t=token.value.trim();if(!t){status.textContent="Enter a token first.";return}localStorage.setItem(KEY,t);status.textContent="Token saved locally. Press Connect GitHub to verify it."};
+document.getElementById("clear").onclick=()=>{localStorage.removeItem(KEY);token.value="";setState(false,"Not connected");status.textContent="Token cleared."};
+if(localStorage.getItem(KEY)){setState(true,"Token saved — reconnecting...");token.value="";loadAdmin()}
+</script>
+</body>
+</html>
