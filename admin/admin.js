@@ -2,6 +2,7 @@ const owner="kindgommangaraw",repo="kindgommangaraw.github.io",branch="main",KEY
 const $=id=>document.getElementById(id);
 function msg(x){$("status").textContent=x}
 function auth(){const t=localStorage.getItem(KEY)||$("token").value.trim();if(!t)throw Error("Connect GitHub first.");return t}
+function requireWriteToken(){const t=auth();return t}
 $("save").onclick=()=>{const t=$("token").value.trim();if(!t){msg("Enter a GitHub token first.");return}localStorage.setItem(KEY,t);msg("Token saved locally.")};
 $("clear").onclick=()=>{localStorage.removeItem(KEY);$("token").value="";msg("Token cleared.")};
 async function gh(path,options={}){const r=await fetch("https://api.github.com/repos/"+owner+"/"+repo+"/contents/"+path,{...options,headers:{Accept:"application/vnd.github+json",Authorization:"Bearer "+auth(),"X-GitHub-Api-Version":"2022-11-28",...(options.headers||{})}});if(!r.ok)throw Error((await r.text()).slice(0,500));return r.json()}
