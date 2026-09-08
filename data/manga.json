@@ -11,6 +11,18 @@
       "genres": [],
       "cover": "/manga-covers/kingdom-raw.webp",
       "description": "キングダム raw ( Kingdom Raw ) chapters."
+    },
+    {
+      "slug": "blue-lock",
+      "title": "Blue Lock raw",
+      "japanese_title": "ブルーロック",
+      "country": "JP",
+      "author": "",
+      "artist": "",
+      "status": "Ongoing",
+      "genres": [],
+      "cover": "",
+      "description": "Blue Lock raw chapters."
     }
   ]
 }
