@@ -1,5 +1,1 @@
-window.MANGAREADER_CONFIG = {
-  SUPABASE_URL: '',
-  SUPABASE_ANON_KEY: '',
-  SITE_NAME: 'MangaReader'
-};
+window.MANGAREADER_CONFIG={SITE_NAME:"MangaReader",DATA_BASE:"/data"};
