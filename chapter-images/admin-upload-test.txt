@@ -1,1 +1,0 @@
-MangaAtlas admin upload API test
