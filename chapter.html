@@ -62,7 +62,7 @@ async function load(){
   const desc=`Read ${title} on MangaReader.`;
   const url=location.origin+location.pathname+'?slug='+encodeURIComponent(c.slug);
   setSEO(title,desc,url);
-  if(typeof gtag==='function'){gtag('event','page_view',{page_title:title,page_location:url,page_path:location.pathname+location.search});}
+  if(typeof gtag==='function'){gtag('config','G-H6EJRG3641',{page_title:title,page_location:url,page_path:location.pathname+location.search});}
   const same=chapters.filter(x=>x.manga_slug===c.manga_slug).slice().sort((a,b)=>Number(a.number)-Number(b.number));
   const i=same.findIndex(x=>x.slug===c.slug);const prev=i>0?same[i-1]:null;const next=i>=0&&i<same.length-1?same[i+1]:null;
   let pages=Array.isArray(c.pages)?c.pages.filter(Boolean).map((p,n)=>({name:String(n+1).padStart(3,'0')+'.jpg',url:p})):[];
