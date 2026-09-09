@@ -28,15 +28,13 @@
       "alt_text": "キングダム raw ( Kingdom Raw ) 第887話"
     },
     {
-      "id": "blue-lock-360-raw",
-      "mangaId": "blue-lock",
+      "id": "blue-raw-360",
       "manga_slug": "blue-lock",
       "title": "ブルーロック raw ( Blue Lock raw ) 第360話",
       "number": 360,
       "slug": "blue-raw-360",
       "country": "JP",
-      "pages": [],
-      "alt_text": "ブルーロック raw ( Blue Lock raw ) 第360話"
+      "pages": []
     }
   ]
 }
