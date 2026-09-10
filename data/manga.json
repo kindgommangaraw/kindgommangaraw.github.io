@@ -9,7 +9,7 @@
       "artist": "",
       "status": "Ongoing",
       "genres": [],
-      "cover": "/manga-covers/kingdom-raw.webp",
+      "cover": "https://raw.githubusercontent.com/kindgommangaraw/kindgommangaraw.github.io/main/manga-covers/kingdom-raw.webp?v=c33f283bec145b770281df4621644a177c07caa3",
       "description": "キングダム raw ( Kingdom Raw ) chapters."
     },
     {
@@ -21,7 +21,7 @@
       "artist": "",
       "status": "Ongoing",
       "genres": [],
-      "cover": "/manga-covers/blue-lock.jpg",
+      "cover": "https://raw.githubusercontent.com/kindgommangaraw/kindgommangaraw.github.io/main/manga-covers/blue-lock.jpg?v=cc676a0882e7fa1cb4bd50ed9fd51d1a5672940c",
       "description": "Blue Lock raw chapters."
     },
     {
@@ -33,7 +33,7 @@
       "artist": "Eiichiro Oda",
       "status": "Ongoing",
       "genres": [],
-      "cover": "/manga-covers/one-piece-raw.webp",
+      "cover": "https://raw.githubusercontent.com/kindgommangaraw/kindgommangaraw.github.io/main/manga-covers/one-piece-raw.webp?v=334561772022e3e15b19012291e781f92aa6243c",
       "description": "ワンピース Raw raw ( One Piece raw ) chapters."
     },
     {
@@ -45,7 +45,7 @@
       "artist": "Yuto Suzuki",
       "status": "Ongoing",
       "genres": [],
-      "cover": "/manga-covers/sakamoto-days-raw.jpg",
+      "cover": "https://raw.githubusercontent.com/kindgommangaraw/kindgommangaraw.github.io/main/manga-covers/sakamoto-days-raw.jpg?v=06886b44e9e724ff890d9f485f619e6909267277",
       "description": "SAKAMOTO DAYS – サカモトデイズ raw chapters."
     }
   ]
