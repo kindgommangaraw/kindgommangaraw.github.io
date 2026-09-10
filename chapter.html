@@ -3,47 +3,38 @@
 <head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6EJRG3641"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-H6EJRG3641', {send_page_view: false});
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-H6EJRG3641',{send_page_view:false});
 </script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="index,follow,max-image-preview:large">
-<meta name="description" id="metaDesc" content="Read manga chapter on MangaReader.">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow,max-image-preview:large"><meta name="description" id="metaDesc" content="Read manga chapter on MangaReader.">
 <link rel="canonical" id="canonical" href="https://kindgommangaraw.github.io/chapter.html">
-<meta property="og:type" content="article">
-<meta property="og:title" id="ogTitle" content="MangaReader Chapter">
-<meta property="og:description" id="ogDesc" content="Read manga chapter on MangaReader.">
-<meta property="og:url" id="ogUrl" content="https://kindgommangaraw.github.io/chapter.html">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" id="twTitle" content="MangaReader Chapter">
-<meta name="twitter:description" id="twDesc" content="Read manga chapter on MangaReader.">
+<meta property="og:type" content="article"><meta property="og:title" id="ogTitle" content="MangaReader Chapter"><meta property="og:description" id="ogDesc" content="Read manga chapter on MangaReader."><meta property="og:url" id="ogUrl" content="https://kindgommangaraw.github.io/chapter.html">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" id="twTitle" content="MangaReader Chapter"><meta name="twitter:description" id="twDesc" content="Read manga chapter on MangaReader.">
 <title id="pageTitle">MangaReader Chapter</title>
-<style>
-*{box-sizing:border-box}body{margin:0;background:#08090d;color:#f5f5f7;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.top{position:sticky;top:0;z-index:5;background:rgba(8,9,13,.94);backdrop-filter:blur(12px);border-bottom:1px solid #242733}.bar{max-width:1100px;margin:auto;padding:15px 18px;display:flex;gap:12px;align-items:center;justify-content:space-between}.brand{font-weight:800}.back{color:#b9c2d5;text-decoration:none}.wrap{max-width:1000px;margin:auto;padding:28px 14px 60px}.head{text-align:center;padding:18px 0 28px}.head h1{font-size:clamp(25px,5vw,42px);margin:0 0 8px;line-height:1.25}.head p{margin:5px 0;color:#9aa0ad}.nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 0 25px}.btn{display:inline-block;padding:10px 15px;border:1px solid #303543;border-radius:10px;text-decoration:none;color:#f5f5f7;background:#11141b}.btn.disabled{opacity:.4;pointer-events:none}.pages{display:flex;flex-direction:column;align-items:center;gap:8px}.page{display:block;width:100%;max-width:900px;height:auto}.page img{display:block;width:100%;height:auto;background:#111}.state{text-align:center;padding:55px 20px;border:1px dashed #303543;border-radius:14px;color:#a4a9b6}.error{color:#ff9d9d}.count{text-align:center;color:#777e8d;font-size:13px;margin-top:22px}
-</style>
+<style>*{box-sizing:border-box}body{margin:0;background:#08090d;color:#f5f5f7;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.top{position:sticky;top:0;z-index:5;background:rgba(8,9,13,.94);backdrop-filter:blur(12px);border-bottom:1px solid #242733}.bar{max-width:1100px;margin:auto;padding:15px 18px;display:flex;gap:12px;align-items:center;justify-content:space-between}.brand{font-weight:800}.back{color:#b9c2d5;text-decoration:none}.wrap{max-width:1000px;margin:auto;padding:28px 14px 60px}.head{text-align:center;padding:18px 0 28px}.head h1{font-size:clamp(25px,5vw,42px);margin:0 0 8px;line-height:1.25}.head p{margin:5px 0;color:#9aa0ad}.nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 0 25px}.btn{display:inline-block;padding:10px 15px;border:1px solid #303543;border-radius:10px;text-decoration:none;color:#f5f5f7;background:#11141b}.btn.disabled{opacity:.4;pointer-events:none}.pages{display:flex;flex-direction:column;align-items:center;gap:8px}.page{display:block;width:100%;max-width:900px;height:auto}.page img{display:block;width:100%;height:auto;background:#111}.state{text-align:center;padding:55px 20px;border:1px dashed #303543;border-radius:14px;color:#a4a9b6}.error{color:#ff9d9d}.count{text-align:center;color:#777e8d;font-size:13px;margin-top:22px}</style>
 </head>
-<body>
-<header class="top"><div class="bar"><a class="brand" href="/">MangaReader</a><a class="back" href="/">← Home</a></div></header>
-<main class="wrap"><section id="app"><div class="state">Loading chapter…</div></section></main>
+<body><header class="top"><div class="bar"><a class="brand" href="/">MangaReader</a><a class="back" href="/">← Home</a></div></header><main class="wrap"><section id="app"><div class="state">Loading chapter…</div></section></main>
 <script>
 const REPO='kindgommangaraw/kindgommangaraw.github.io';
-const BASE='https://api.github.com/repos/'+REPO+'/contents/';
 const RAW='https://raw.githubusercontent.com/'+REPO+'/main/';
+const API='https://api.github.com/repos/'+REPO+'/contents/';
 const slug=new URLSearchParams(location.search).get('slug');
-const esc=v=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
 const app=document.getElementById('app');
-function setSEO(title,desc,url){document.title=title;document.getElementById('metaDesc').content=desc;document.getElementById('canonical').href=url;document.getElementById('ogTitle').content=title;document.getElementById('ogDesc').content=desc;document.getElementById('ogUrl').content=url;document.getElementById('twTitle').content=title;document.getElementById('twDesc').content=desc;}
-function sortNum(a,b){return String(a.name).localeCompare(String(b.name),undefined,{numeric:true,sensitivity:'base'});}
-async function json(path){const r=await fetch(path+'?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('Could not load '+path);return r.json();}
-async function directoryImages(chapter){
- const dir='chapter-images/'+chapter.manga_slug+'/chapter-'+chapter.number+'/';
- const r=await fetch(BASE+dir+'?ref=main&t='+Date.now(),{headers:{Accept:'application/vnd.github+json'},cache:'no-store'});
- if(!r.ok) return [];
- const files=await r.json();
- return files.filter(x=>x.type==='file'&&/\.(jpe?g|png|webp|gif)$/i.test(x.name)).sort(sortNum).map(x=>({name:x.name,url:(x.download_url||RAW+dir+x.name)+'?v='+encodeURIComponent(x.sha||Date.now())}));
+const esc=v=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+function setSEO(title,desc,url){document.title=title;metaDesc.content=desc;canonical.href=url;ogTitle.content=title;ogDesc.content=desc;ogUrl.content=url;twTitle.content=title;twDesc.content=desc;}
+async function json(path){const r=await fetch(path+'?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('Could not load '+path);return r.json();}
+function rawFromPage(p,sha){
+ const clean=String(p).split('?')[0].replace(/^\//,'');
+ return RAW+clean+'?v='+encodeURIComponent(sha||Date.now());
+}
+async function directoryImages(c){
+ const dir='chapter-images/'+c.manga_slug+'/chapter-'+c.number+'/';
+ try{
+  const r=await fetch(API+dir+'?ref=main&t='+Date.now(),{cache:'no-store'});
+  if(!r.ok)return [];
+  const files=await r.json();
+  return files.filter(x=>x.type==='file'&&/\.(jpe?g|png|webp|gif)$/i.test(x.name)).sort((a,b)=>a.name.localeCompare(b.name,undefined,{numeric:true})).map(x=>({name:x.name,url:RAW+dir+x.name+'?v='+encodeURIComponent(x.sha||Date.now())}));
+ }catch{return []}
 }
 async function load(){
  if(!slug){app.innerHTML='<div class="state error">Chapter not found.</div>';return;}
@@ -57,19 +48,18 @@ async function load(){
   const mangaTitle=manga?.title||c.manga_slug||'Manga';
   const title=c.title||(`${mangaTitle} Chapter ${c.number||''}`);
   const desc=`Read ${title} on MangaReader.`;
-  const url=location.origin+location.pathname+'?slug='+encodeURIComponent(c.slug);
-  setSEO(title,desc,url);
-  if(typeof gtag==='function'){gtag('event','page_view',{page_title:title,page_location:url,page_path:location.pathname+location.search});}
+  const pageUrl=location.origin+location.pathname+'?slug='+encodeURIComponent(c.slug);
+  setSEO(title,desc,pageUrl);
+  if(typeof gtag==='function')gtag('event','page_view',{page_title:title,page_location:pageUrl,page_path:location.pathname+location.search});
   const same=chapters.filter(x=>x.manga_slug===c.manga_slug).slice().sort((a,b)=>Number(a.number)-Number(b.number));
-  const i=same.findIndex(x=>x.slug===c.slug);const prev=i>0?same[i-1]:null;const next=i>=0&&i<same.length-1?same[i+1]:null;
-  let pages=await directoryImages(c);
-  if(!pages.length&&Array.isArray(c.pages)) pages=c.pages.filter(Boolean).map((p,n)=>({name:String(n+1).padStart(3,'0')+'.jpg',url:p}));
+  const i=same.findIndex(x=>x.slug===c.slug),prev=i>0?same[i-1]:null,next=i>=0&&i<same.length-1?same[i+1]:null;
+  let pages=[];
+  if(Array.isArray(c.pages)&&c.pages.length){pages=c.pages.filter(Boolean).map((p,n)=>({name:String(n+1).padStart(3,'0')+'.jpg',url:rawFromPage(p)}));}
+  if(!pages.length)pages=await directoryImages(c);
   const nav=`<div class="nav"><a class="btn ${prev?'':'disabled'}" href="${prev?'?slug='+encodeURIComponent(prev.slug):'#'}">← Previous</a><a class="btn" href="/">Home</a><a class="btn ${next?'':'disabled'}" href="${next?'?slug='+encodeURIComponent(next.slug):'#'}">Next →</a></div>`;
   if(!pages.length){app.innerHTML=`<section class="head"><h1>${esc(title)}</h1><p>${esc(mangaTitle)} · Chapter ${esc(c.number||'')}</p></section>${nav}<div class="state">This chapter has no pages yet.</div>`;return;}
-  app.innerHTML=`<section class="head"><h1>${esc(title)}</h1><p>${esc(mangaTitle)} · Chapter ${esc(c.number||'')}</p></section>${nav}<section class="pages">${pages.map((p,n)=>`<div class="page"><img src="${esc(p.url)}" alt="${esc(title)} — Page ${n+1}" loading="${n<2?'eager':'lazy'}" decoding="async"></div>`).join('')}</section><div class="count">${pages.length} pages</div>${nav}`;
+  app.innerHTML=`<section class="head"><h1>${esc(title)}</h1><p>${esc(mangaTitle)} · Chapter ${esc(c.number||'')}</p></section>${nav}<section class="pages">${pages.map((p,n)=>`<div class="page"><img src="${esc(p.url)}" alt="${esc(title)} — Page ${n+1}" loading="${n<2?'eager':'lazy'}" decoding="async" onerror="this.parentElement.style.display='none'"></div>`).join('')}</section><div class="count">${pages.length} pages</div>${nav}`;
  }catch(e){console.error(e);app.innerHTML='<div class="state error">Could not load this chapter. Please try again.</div>';}
 }
 load();
-</script>
-</body>
-</html>
+</script></body></html>
