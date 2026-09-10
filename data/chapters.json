@@ -59,6 +59,26 @@
         "/chapter-images/blue-lock/chapter-360/020.jpg"
       ],
       "alt_text": "ブルーロック raw ( Blue Lock raw ) 第360話"
+    },
+    {
+      "id": "one-piece-raw-1193",
+      "manga_slug": "one-piece-raw",
+      "title": "ワンピース Raw raw 第1193話 ( One Piece raw Chapter 1193 )",
+      "number": 1193,
+      "slug": "one-piece-raw-1193",
+      "country": "JP",
+      "pages": [],
+      "alt_text": "ワンピース Raw raw 第1193話 ( One Piece raw Chapter 1193 )"
+    },
+    {
+      "id": "sakamoto-days-raw-275",
+      "manga_slug": "sakamoto-days-raw",
+      "title": "SAKAMOTO DAYS – サカモトデイズ raw 第275話",
+      "number": 275,
+      "slug": "sakamoto-days-raw-275",
+      "country": "JP",
+      "pages": [],
+      "alt_text": "SAKAMOTO DAYS – サカモトデイズ raw 第275話"
     }
   ]
 }
