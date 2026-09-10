@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://kindgommangaraw.github.io/</loc>
-  </url>
-  <url>
-    <loc>https://kindgommangaraw.github.io/manga.html?slug=kingdom-raw</loc>
-  </url>
-  <url>
-    <loc>https://kindgommangaraw.github.io/chapter.html?slug=kingdom-raw-887</loc>
-  </url>
+  <url><loc>https://kindgommangaraw.github.io/</loc></url>
+  <url><loc>https://kindgommangaraw.github.io/manga.html?slug=kingdom-raw</loc></url>
+  <url><loc>https://kindgommangaraw.github.io/manga.html?slug=blue-lock</loc></url>
+  <url><loc>https://kindgommangaraw.github.io/manga.html?slug=one-piece-raw</loc></url>
+  <url><loc>https://kindgommangaraw.github.io/manga.html?slug=sakamoto-days-raw</loc></url>
+  <url><loc>https://kindgommangaraw.github.io/chapter.html?slug=kingd-raw-887</loc></url>
+  <url><loc>https://kindgommangaraw.github.io/chapter.html?slug=blue-raw-360</loc></url>
+  <url><loc>https://kindgommangaraw.github.io/chapter.html?slug=one-piece-raw-1193</loc></url>
+  <url><loc>https://kindgommangaraw.github.io/chapter.html?slug=sakamoto-days-raw-275</loc></url>
 </urlset>
