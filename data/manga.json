@@ -23,6 +23,30 @@
       "genres": [],
       "cover": "/manga-covers/blue-lock.jpg",
       "description": "Blue Lock raw chapters."
+    },
+    {
+      "slug": "one-piece-raw",
+      "title": "ワンピース Raw raw ( One Piece raw )",
+      "japanese_title": "ワンピース",
+      "country": "JP",
+      "author": "Eiichiro Oda",
+      "artist": "Eiichiro Oda",
+      "status": "Ongoing",
+      "genres": [],
+      "cover": "/manga-covers/one-piece-raw.jpg",
+      "description": "ワンピース Raw raw ( One Piece raw ) chapters."
+    },
+    {
+      "slug": "sakamoto-days-raw",
+      "title": "SAKAMOTO DAYS – サカモトデイズ raw",
+      "japanese_title": "サカモトデイズ",
+      "country": "JP",
+      "author": "Yuto Suzuki",
+      "artist": "Yuto Suzuki",
+      "status": "Ongoing",
+      "genres": [],
+      "cover": "/manga-covers/sakamoto-days-raw.jpg",
+      "description": "SAKAMOTO DAYS – サカモトデイズ raw chapters."
     }
   ]
 }
