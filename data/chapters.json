@@ -130,6 +130,36 @@
         "/chapter-images/sakamoto-days-raw/chapter-275-test/003.svg"
       ],
       "alt_text": "SAKAMOTO DAYS – サカモトデイズ raw 第275話 — SEO Test"
+    },
+    {
+      "id": "sakamoto-days-raw-275-v2",
+      "manga_slug": "sakamoto-days-raw",
+      "title": "SAKAMOTO DAYS – サカモトデイズ raw 第275話",
+      "number": 275,
+      "slug": "sakamoto-days-raw-275-v2",
+      "country": "JP",
+      "pages": [
+        "/chapter-images/sakamoto-days-raw/chapter-275/001.jpg?v=1789190013461",
+        "/chapter-images/sakamoto-days-raw/chapter-275/002.jpg?v=1789190016760",
+        "/chapter-images/sakamoto-days-raw/chapter-275/003.jpg?v=1789190019526",
+        "/chapter-images/sakamoto-days-raw/chapter-275/004.jpg?v=1789190022171",
+        "/chapter-images/sakamoto-days-raw/chapter-275/005.jpg?v=1789190024629",
+        "/chapter-images/sakamoto-days-raw/chapter-275/006.jpg?v=1789190027183",
+        "/chapter-images/sakamoto-days-raw/chapter-275/007.jpg?v=1789190029878",
+        "/chapter-images/sakamoto-days-raw/chapter-275/008.jpg?v=1789190032568",
+        "/chapter-images/sakamoto-days-raw/chapter-275/009.jpg?v=1789190035342",
+        "/chapter-images/sakamoto-days-raw/chapter-275/010.jpg?v=1789190038250",
+        "/chapter-images/sakamoto-days-raw/chapter-275/011.jpg?v=1789190040914",
+        "/chapter-images/sakamoto-days-raw/chapter-275/012.jpg?v=1789190044274",
+        "/chapter-images/sakamoto-days-raw/chapter-275/013.jpg?v=1789190048598",
+        "/chapter-images/sakamoto-days-raw/chapter-275/014.jpg?v=1789190053740",
+        "/chapter-images/sakamoto-days-raw/chapter-275/015.jpg?v=1789190056440",
+        "/chapter-images/sakamoto-days-raw/chapter-275/016.jpg?v=1789190059460",
+        "/chapter-images/sakamoto-days-raw/chapter-275/017.jpg?v=1789190062357",
+        "/chapter-images/sakamoto-days-raw/chapter-275/018.jpg?v=1789190065117",
+        "/chapter-images/sakamoto-days-raw/chapter-275/019.jpg?v=1789190068110",
+        "/chapter-images/sakamoto-days-raw/chapter-275/020.jpg?v=1789190070785"
+      ]
     }
   ]
 }
