@@ -20,7 +20,7 @@
         "/chapter-images/kingdom-raw/chapter-887/010.jpg?v=a4470891035094b9a6a5e52934ac3fa81d0cf2f6",
         "/chapter-images/kingdom-raw/chapter-887/011.jpg?v=bdedd28412258df27b89113a8fa38eb59ae9c37b",
         "/chapter-images/kingdom-raw/chapter-887/012.jpg?v=6c1e3c208be913e3cb6d4a7c95eee84a30eccecf",
-        "/chapter-images/kingdom-raw/chapter-887/013.jpg?v=9c12f69388aee7e0e458220c340ed4a74306fd13",
+        "/chapter-images/kingdom-raw/chapter-887/013.jpg?v=9c12f69388e7e0e458220c340ed4a74306fd13",
         "/chapter-images/kingdom-raw/chapter-887/014.jpg?v=f7a6b79645def84660841a15d28c3b44c650defa",
         "/chapter-images/kingdom-raw/chapter-887/015.jpg?v=888ca59d2fed6d206edbed446247776f93ac8e1a",
         "/chapter-images/kingdom-raw/chapter-887/016.jpg?v=32d9d1439d0b3612cddc0dacb37cbc2ad03c051b",
@@ -116,6 +116,20 @@
         "/chapter-images/sakamoto-days-raw/chapter-275/019.jpg?v=1789034961078",
         "/chapter-images/sakamoto-days-raw/chapter-275/020.jpg?v=1789034963703"
       ]
+    },
+    {
+      "id": "sakamoto-days-raw-275-test",
+      "manga_slug": "sakamoto-days-raw",
+      "title": "SAKAMOTO DAYS – サカモトデイズ raw 第275話",
+      "number": 275,
+      "slug": "sakamoto-days-raw-275-test",
+      "country": "JP",
+      "pages": [
+        "/chapter-images/sakamoto-days-raw/chapter-275-test/001.svg",
+        "/chapter-images/sakamoto-days-raw/chapter-275-test/002.svg",
+        "/chapter-images/sakamoto-days-raw/chapter-275-test/003.svg"
+      ],
+      "alt_text": "SAKAMOTO DAYS – サカモトデイズ raw 第275話 — SEO Test"
     }
   ]
 }
