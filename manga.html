@@ -4,21 +4,21 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6EJRG3641"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-H6EJRG3641');
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments)}
+  gtag('js',new Date());
+  gtag('config','G-H6EJRG3641',{send_page_view:false});
 </script>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="description" id="metaDesc" content="Read manga chapters on MangaReader.">
-<link rel="canonical" id="canonical" href="https://kindgommangaraw.github.io/manga.html">
+<link rel="canonical" id="canonical" href="https://jpmangaatlis.online/manga.html">
 <meta property="og:type" content="website">
 <meta property="og:title" id="ogTitle" content="MangaReader Manga">
 <meta property="og:description" id="ogDesc" content="Read manga chapters on MangaReader.">
-<meta property="og:url" id="ogUrl" content="https://kindgommangaraw.github.io/manga.html">
+<meta property="og:url" id="ogUrl" content="https://jpmangaatlis.online/manga.html">
 <meta property="og:image" id="ogImage" content="">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" id="twTitle" content="MangaReader Manga">
@@ -35,7 +35,7 @@
 <script>
 const slug=new URLSearchParams(location.search).get('slug');
 const app=document.getElementById('app');
-const esc=v=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+const esc=v=>String(v??'').replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#039;'}[m]));
 async function json(path){const r=await fetch(path+'?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('Could not load '+path);return r.json();}
 function setSEO(title,desc,url,image){document.title=title;document.getElementById('metaDesc').content=desc;document.getElementById('canonical').href=url;document.getElementById('ogTitle').content=title;document.getElementById('ogDesc').content=desc;document.getElementById('ogUrl').content=url;document.getElementById('twTitle').content=title;document.getElementById('twDesc').content=desc;if(image){document.getElementById('ogImage').content=image;document.getElementById('twImage').content=image;}}
 async function load(){
@@ -50,6 +50,7 @@ async function load(){
   const url=location.origin+location.pathname+'?slug='+encodeURIComponent(slug);
   const image=manga.cover||'';
   setSEO(title,desc,url,image);
+  if(typeof gtag==='function')gtag('event','page_view',{page_title:title,page_location:url,page_path:location.pathname+location.search});
   const cover=image?`<img class="cover" src="${esc(image)}" alt="${esc(title)} cover" loading="eager" decoding="async">`:'<div class="no-cover">Cover image not available</div>';
   const tags=[manga.country,manga.status,manga.author,manga.artist].filter(Boolean).map(x=>`<span class="tag">${esc(x)}</span>`).join('');
   const list=chapters.length?chapters.map(c=>`<a class="chapter" href="/chapter.html?slug=${encodeURIComponent(c.slug||'')}"><span><strong>${esc(c.title||('Chapter '+c.number))}</strong></span><span class="num">Chapter ${esc(c.number||'')}</span></a>`).join(''):'<div class="state">No chapters published yet.</div>';
